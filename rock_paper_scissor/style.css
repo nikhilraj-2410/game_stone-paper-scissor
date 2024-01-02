@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    text-align:center;  
+    overflow :hidden;
+    
+}
+body{
+    
+    background-color: #DAD5CF;
+}
+
+h1{
+    background-color:#253F4B;
+    color:#E8EBED;
+    height:4rem;
+    line-height: 4rem;
+}
+
+.choice{
+    height:50px;
+    width:50px;
+    background-color: #758D93;
+    border-radius:50%;
+    padding:2rem;
+    color:white;
+    font-size:1.8rem;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.choice:hover{
+    /* opacity:0.5; */
+    border:5px solid black ;
+    cursor:pointer;
+}
+.choices{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    gap: 4rem;
+    margin-top:5.2rem;
+   
+
+}
+
+.score-board{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    font-size:2.5rem;
+    margin-top: 4rem;
+    gap:2.5rem;
+
+
+}
+
+#user-score, #comp-score{
+      font-size: 2rem;  
+}
+.msg-container{
+    margin-top:6rem;
+    
+}
+
+#msg{
+    margin-top: 1rem;
+    background-color: #163847;
+    color:#ffffff;
+    font-size: 2rem;
+    border-radius:20%;
+    display:inline;
+    
+    /* jitna part content ka hai utna hi use karna hai */
+    padding:2rem;
+}
+
+
+/* additionally added */
+
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(13, 13, 13, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#081b31
+}
+
+.popup-content {
+    background: #ffffff;
+    padding: 30px;
+   
+    text-align: center;
+   
+}
+
+#description {
+    margin-top: 5rem;
+    background-color:#081b31;
+    color:#ffffff;
+    font-size: 2rem;
+    display:inline; 
+    /* jitna part content ka hai utna hi use karna hai */
+    padding:1rem;
+}
+ 
+   
+.description-box {
+    
+    padding: 2rem;
+    background-color: #365563;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size:1.2rem;
+    text-align: left;
+    color:#ffffff;
+    display:inline-block;
+    width:800px;
+
+}
+
+/* here we are adding the description who will win the :matchh */
+.animation-container {
+    position: absolute;
+    top: 80%;
+    left: 10%; /* Start off-screen to the right */
+    
+    white-space: nowrap; /* Prevent text from wrapping */
+    animation: slideIn 2s forwards, hideContent 5s forwards; /* Animation duration and fill-mode */
+}
+
+@keyframes slideIn {
+    to {
+        left: 0; /* Move to the left edge */
+    }
+}
+
+@keyframes hideContent {
+    /* Hide content after 8 seconds */
+    100% {
+        opacity: 1;
+        left: 10%; /* Move off-screen again */
+    }
+}
+
+#name-description {
+    font-size: 24px;
+    color: #333;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: inline-block; /* Display as inline-block to allow animation */
+}
+
+/* Common styles for all screen sizes */
+
+/* Common styles for all screen sizes */
+
+.my-element {
+    width: 100%;
+    max-width: 600px; /* Set a maximum width for larger screens */
+    margin: 0 auto; /* Center the element on the page */
+    overflow-x: auto; /* Enable horizontal scrolling for large content */
+}
+
+/* Media query for screens with a maximum width of 600px (typical mobile devices) */
+
+@media screen and (max-width: 600px) {
+    .my-element {
+        max-width: 100%; /* Take up the full width of the screen */
+    }
+    .description-box {
+        padding: 0.5rem;
+        width:350px;
+    }
+
+    .choices {
+        gap:1rem;
+    }
+
+    .choice{ 
+        background-color: #758D93;
+        border-radius:50%;
+        padding:2rem;
+        color:white;
+        font-size:1rem;       
+    }
+
+    #msg{
+        width:300px;
+        font-size:0.7rem;
+
+    }
+
+}
